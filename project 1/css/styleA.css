@@ -1,0 +1,45 @@
+ol
+{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    
+    /*aligns the boxes  */
+    align-items: center; /*always vertical irrespective of flex direction*/
+
+     /* without height wont work */
+    height: 100%;
+    justify-content: space-around; /*along flex direction*/
+
+    font-family: Tahoma;
+    font-size: 40px;
+}
+
+li
+{   
+    /* keep dim const, otherwise shrinks with small window size */
+    display: table;
+    table-layout: fixed; 
+
+    height: 100px;
+    width: 100px;
+    background-color: #dfe1e7;
+    text-align: center ;
+    border-top: 1px solid #687291;
+}
+
+/*Boxes alternate colors  */
+li:nth-child(odd)
+{
+    background-color: #eeeff2;
+}
+
+li:last-child
+{
+    background-color: #eeeff2;
+    border: 4px solid black ;
+    display: flex;
+    justify-content: center; /*horizontal*/
+    align-items: center; /*vertical*/
+}
+ 

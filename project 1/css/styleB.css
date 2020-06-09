@@ -1,0 +1,37 @@
+ol
+{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    height: 100%;
+    width: 100%;
+
+    font-family: Tahoma;
+    font-size: 40px;
+}
+
+li
+{   
+    height: 150px;
+    width: 100px;
+    margin: 10px;
+    padding: 10px;
+    border-left: 10px dotted #D0D0FF;
+    background-color: #eeeff2;
+}
+
+
+li:last-child
+{   
+    align-self: flex-end;
+}
+li:hover
+{
+    cursor: hand;
+    background-color: yellow;
+    color: goldenrod;
+
+}
+ 
