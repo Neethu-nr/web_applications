@@ -1,1 +1,7 @@
-*.mp4
+videos/*
+*.pdf
+project 2/node_modules
+project 2/node_modules/*
+project 2/.jshintrc
+project 2/*json
+
