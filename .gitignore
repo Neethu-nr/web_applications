@@ -1,7 +1,7 @@
 videos/*
 *.pdf
-project 2/node_modules
-project 2/node_modules/*
-project 2/.jshintrc
-project 2/*json
+*/node_modules
+*/node_modules/*
+*/.jshintrc
+*/*json
 
