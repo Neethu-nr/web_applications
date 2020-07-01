@@ -106,7 +106,7 @@ function DatePicker(id, callback){
             for(var j=0; j<calendarElement.rows[i].cells.length; j++){
                 var cell = calendarElement.rows[i].cells[j];
                 if (cell.classList.contains("curMonth")){
-                    cell.onclick=function(){var thisCell=cell; callbackWrapper(thisCell, calendarElement, event)};            
+                    cell.onclick=function(){callbackWrapper(cell, calendarElement, event)};            
                 }
             }
         }
