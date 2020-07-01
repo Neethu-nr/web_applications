@@ -63,15 +63,18 @@ function generateGrid(id,startDay, days, fixedDate){
 function DatePicker(id, callback){
     // valid date selected - invoke callback
     function callbackWrapper(cell, table, event){
+        // get date
         var numToMonths = {"Jan":1,"Feb":2,"Mar":3,"Apr":4,"May":5,"Jun":6,"Jul":7,"Aug":8,"Sep":9,"Oct":10,"Nov":11,"Dec":12};
-        var row1 = table.rows[0].cells[0].getElementsByTagName("span")[0];  
-
-        var clickedDate = {'month':numToMonths[row1.getAttribute("month")],
+        var row = table.rows[0].cells[0].getElementsByTagName("span")[0];  
+        var clickedDate = {'month':numToMonths[row.getAttribute("month")],
                         'day':cell.innerHTML,
-                        'year':row1.getAttribute("year")
+                        'year':row.getAttribute("year")
                         }; 
-
         callback(id,clickedDate);
+
+        // highlight correct cell
+        table.getElementsByClassName("selected")[0].classList.remove("selected");
+        cell.classList.add("selected");
         event.stopPropagation();
     }   
 

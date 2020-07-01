@@ -57,6 +57,7 @@ body{
     background-color: #006bff;
 }
 
+
 .year::before{
     content: attr(month) " " attr(year);
 }
