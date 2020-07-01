@@ -1,0 +1,62 @@
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.calendar 
+{
+    background-color: gray;
+    font-size: 15px;
+    padding: 10px 10px;
+    border-collapse: collapse;
+}
+
+.calendar th{
+    height: 50px;
+    width: 80px;
+
+}
+
+.calendar .prevMonth{
+    color: #b9c9b9;
+    background-color: darkgray;
+}
+
+.calendar th.curMonth:hover{
+    background-color: darkgrey;
+    cursor: grab;
+}
+
+
+.button-left{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 20px 5px 0;
+    border-color: transparent #008bff transparent transparent;
+    display: inline-block;
+    margin: 0px 10px;
+}
+.button-right{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 0 5px 20px;
+    border-color: transparent transparent transparent #008bff;
+    display: inline-block;
+    margin: 0px 10px;    
+}
+
+.button-year-left{
+    border-right-color: black;
+}
+.button-year-right{
+    border-left-color: black;
+}
+
+.calendar .selected{
+    background-color: #006bff;
+}
+
+.year::before{
+    content: attr(month) " " attr(year);
+}
