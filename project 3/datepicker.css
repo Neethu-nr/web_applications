@@ -45,6 +45,12 @@ body{
     display: inline-block;
     margin: 0px 10px;    
 }
+.button-left:hover{
+    cursor: grab;
+}
+.button-right:hover{
+    cursor: grab;
+}
 
 .button-year-left{
     border-right-color: black;
