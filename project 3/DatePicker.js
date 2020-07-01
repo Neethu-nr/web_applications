@@ -63,14 +63,8 @@ function generateGrid(id,startDay, days, fixedDate){
 function DatePicker(id, callback){
     // valid date selected - invoke callback
     function callbackWrapper(cell, table, event){
-        var numToMonths = {"Jan":1,"Feb":2,"Mar":3,"Apr":4,"May":5,"Jun":6,"Jul":7,"Aug":8,"Sep":9,"Oct":10,"Nov":11,"Dec":12}
-        console.log(cell.innerHTML);
+        var numToMonths = {"Jan":1,"Feb":2,"Mar":3,"Apr":4,"May":5,"Jun":6,"Jul":7,"Aug":8,"Sep":9,"Oct":10,"Nov":11,"Dec":12};
         var row1 = table.rows[0].cells[0].getElementsByTagName("span")[0];  
-        // console.log(table.rows[0].cells[0].innerHTML,table.rows[0].cells[0].attributes);
-        // console.log(table.rows[0].cells[0].getElementsByTagName("span"));
-        // console.log(table.rows[0].cells[0].getElementsByTagName("span")[0]);
-        console.log(table.rows[0].cells[0].getElementsByTagName("span")[0].getAttribute("month"));
-        console.log(table.rows[0].cells[0].getElementsByTagName("span")[0].getAttribute("year"));
 
         var clickedDate = {'month':numToMonths[row1.getAttribute("month")],
                         'day':cell.innerHTML,
@@ -106,7 +100,9 @@ function DatePicker(id, callback){
             for(var j=0; j<calendarElement.rows[i].cells.length; j++){
                 var cell = calendarElement.rows[i].cells[j];
                 if (cell.classList.contains("curMonth")){
-                    cell.onclick=function(){callbackWrapper(cell, calendarElement, event)};            
+                    cell.onclick=function(){
+                            callbackWrapper(this, calendarElement, event)
+                        };            
                 }
             }
         }
