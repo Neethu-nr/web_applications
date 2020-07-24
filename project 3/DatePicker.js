@@ -113,7 +113,7 @@ function DatePicker(id, callback){
                 var cell = table.rows[i].cells[j];
                 if (cell.classList.contains("curMonth")){
                     cell.onclick=function(){
-                            callbackWrapper(this, event)
+                            callbackWrapper(this, event);
                         };            
                 }
             }
@@ -121,13 +121,13 @@ function DatePicker(id, callback){
 
         // buttons to change year and month
         element.getElementsByClassName("button-year-left")[0].onclick = function(){
-            updateYear(-1,event)};
+            updateYear(-1,event);};
         element.getElementsByClassName("button-year-right")[0].onclick = function(){
-            updateYear(1,event)};
+            updateYear(1,event);};
         element.getElementsByClassName("button-month-left")[0].onclick = function(){
-            updateMonth(-1,event)};
+            updateMonth(-1,event);};
         element.getElementsByClassName("button-month-right")[0].onclick = function(){
-            updateMonth(1,event)};    
+            updateMonth(1,event);};    
     }
 
     function updateMonth(delta, event){
@@ -138,7 +138,7 @@ function DatePicker(id, callback){
         row.setAttribute("month", months[month-1]);
         
         // update days
-        var day = element.getElementsByClassName("selected")[0].innerHTML
+        var day = element.getElementsByClassName("selected")[0].innerHTML;
         var year = row.getAttribute("year");
         displayDate(new Date(`${month}/${day}/${year}`));
         addListeners();
@@ -152,7 +152,7 @@ function DatePicker(id, callback){
         row.setAttribute("year", year); 
 
         // update days
-        var day = element.getElementsByClassName("selected")[0].innerHTML
+        var day = element.getElementsByClassName("selected")[0].innerHTML;
         var month = row.getAttribute("month");
         displayDate(new Date(`${month}/${day}/${year}`));
         addListeners();
